@@ -3,9 +3,9 @@ import React from 'react'
 import Title from '../components/Title'
 import { TouchableOpacity } from 'react-native'
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
-    <View>
+    <View style={styles.homeView}>
       <Title />
       <View style={styles.imgContainer}>
         <Image 
@@ -16,8 +16,8 @@ const Home = () => {
             resizeMode="contain"
         />
       </View>
-      <TouchableOpacity>
-        <Text>Start</Text>
+      <TouchableOpacity onPress={()=> navigation.navigate("Quiz")} style={styles.btn}>
+        <Text style={styles.btnText}>Start</Text>
       </TouchableOpacity>
     </View>
   )
@@ -32,5 +32,22 @@ const styles = StyleSheet.create({
     },
     imgContainer: {
         alignItems: "center",
+        paddingTop: 40,
+    },
+    homeView: {
+      paddingTop: 120,
+      paddingHorizontal: 20,
+    },
+    btn: {
+      backgroundColor: "#D4E2D4",
+      width: '100%',
+      padding: 30,
+      borderRadius: 100,
+      marginTop: 70,
+    },
+    btnText: {
+      fontSize: 20,
+      textAlign: "center",
+      fontWeight: "900",
     }
 })
