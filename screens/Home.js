@@ -39,11 +39,11 @@ const styles = StyleSheet.create({
       paddingHorizontal: 20,
     },
     btn: {
-      backgroundColor: "#D4E2D4",
+      backgroundColor: "#FF8989",
       width: '100%',
       padding: 30,
       borderRadius: 100,
-      marginTop: 70,
+      marginTop: 150,
     },
     btnText: {
       fontSize: 20,
